@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Encomage_Mymodule>
+            <version>0.1.0</version>    <!-- Version number of your module -->
+        </Encomage_Mymodule>
+    </modules>
+    <frontend>
+	 <layout>
+            <updates>
+                <mymodule>
+                    <file>local.xml</file>
+                </mymodule>
+            </updates>
+        </layout>
+        <routers>
+            <mymodule>
+                <use>standard</use>
+                <args>
+                    <module>Encomage_Mymodule</module>
+                    <frontName>mymodule</frontName>
+                </args>
+            </mymodule>
+        </routers>
+    </frontend>
+	<global>
+		<models>
+            <encomagemymodule>
+                <resourceModel>encomagemymodule_resource</resourceModel>
+            </encomagemymodule>
+            <encomagemymodule_resource>
+                <entities>
+                    <table_users>
+                        <table>encomage_users</table>
+                    </table_users>
+                </entities>
+            </encomagemymodule_resource>
+		</models>
+		<resources>
+			<encomamymodule_setup>
+				<setup>
+					<module>Encomage_Mymodule</module>
+				</setup>
+			</encomamymodule_setup>
+		</resources>
+	</global>
+</config>
