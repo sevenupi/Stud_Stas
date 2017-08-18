@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<layout>
+    <mymodule_index_index>
+		<reference name="mainpage">
+            <block type="page/html" name="root" output="toHtml" template="encomage/mymodule/index.phtml" />
+        </reference>
+	</mymodule_index_index>
+</layout>
