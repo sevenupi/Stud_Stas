@@ -1,0 +1,39 @@
+<h1>Users</h1>
+
+<table class="table">
+
+    <tr>
+	<div class="form-group">
+	
+        <form class="navbar-form pull-left" id="form" name="form" method="post" action="index.php">
+		
+            <td><input class="form-control" type="text" name="id" value="<?php echo $_POST['id'] ?>"></td>
+            <td><input class="form-control" type="text" name="FirstName" value="<?php echo $_POST['FirstName'] ?>"></td>
+            <td><input class="form-control" type="text" name="LastName" value="<?php echo $_POST['LastName'] ?>"></td>
+            <td><input class="form-control" type="text" name="Email" value="<?php echo $_POST['Email'] ?>"></td>
+
+            <td><input class="form-control" type="text" name="CreateDate" value="<?php echo $_POST['CreateDate'] ?>"></td>
+      
+            <td><input class="form-control" type="text" name="UpdateDate" value="<?php echo $_POST['UpdateDate'] ?>"></td>
+            <td><input class="group btn" type="submit" value="Search"  ></td>
+        </form>
+		</div>
+    </tr>
+	
+  <thead class="thead-inverse">
+ <tr>
+        <th>Id</th>
+        <th>Firs tname</th>
+        <th>Last name</th>
+        <th>Email</th>
+        <th>Create date</th>
+        <th>Update date</th>
+    </tr>
+  </thead>
+  <?php
+$users = Mage::registry('users');
+foreach ($users as $item) {
+
+echo '<h1>' .$item['FirstName']  .'<h1>';
+	
+}?>
